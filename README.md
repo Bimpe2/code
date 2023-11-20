@@ -1,2 +1,2 @@
-# code
-Compilation of Python codes
+# SQLcode
+Compilation of SQL codes
