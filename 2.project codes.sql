@@ -250,7 +250,7 @@ GROUP BY e.employee_id, full_name, d.department_name
 HAVING count(e.employee_id) > 1;
 
 -- the 2 employees in the quality control went on leave within the short period
--- maybe the christmas period is their downtime, with further analysis we should be able to find that information out
+-- maybe the christmas period is their downtime, with further analysis we should be able to find that information out 
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name,
 		 e.employee_id, count(e.employee_id), d.department_name, p.project_name, p.project_description
 FROM employee AS e
@@ -265,7 +265,7 @@ ON dp.project_id = p.project_id
 GROUP BY e.employee_id, full_name, d.department_name, p.project_name,  p.project_description
 HAVING count(e.employee_id) > 1;
 
--- with further analysis, was able to find out that in both 
+-- with further analysis, was able to find out that employees in quality control were scheduled on "Nothing" project, so might exlain why they are on leave
 
 
 /* to check for education background for employees in different department and if that affects any ppay
@@ -285,7 +285,7 @@ ORDER BY s.gross_salary DESC,
 ;
 
 /* Limitation includes
-- we d not know how long they have been in the company, or industry, or the type of bachelor they all possess
+- we do not know how long they have been in the company, or industry, or the type of bachelor they all possess
 
 */
 SELECT p.*
